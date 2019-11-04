@@ -1,3 +1,10 @@
 body {
     background: #F8F8FF;
 }
+
+img
+{
+position:absolute;
+bottom: 0px;
+left: 0px;
+}
