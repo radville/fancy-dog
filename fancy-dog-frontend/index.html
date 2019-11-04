@@ -25,8 +25,31 @@
         <![endif]-->
 
         <h1>Fancy Dog</h1>
-        <img src="./images/boston-terrier.png" alt="Boston Terrier">
-        <img src="./images/leprechaun_hat.png" alt="Leprechaun Hat">
+
+        <form id="dog-form" action="#">
+            <div class="input-field">
+                <input type="text" name="name" id="name" />
+                <label for="title">Dog's name</label>
+            </div>
+    
+            <div class="input-field">
+                <input type="hidden" name="accessories" id="accessories" />
+            </div>
+
+            <div id="accessory" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./images/monacle.png" draggable="true" ondragstart="drag(event)" id="drag1">
+                <img src="./images/leprechaun_hat.png" draggable="true" ondragstart="drag(event)" id="drag1">
+                <img src="./images/cowboy-hat.png" draggable="true" ondragstart="drag(event)" id="drag1">
+            </div>
+
+            <img id="main-dog" src="./images/boston-terrier.png" alt="Boston Terrier">
+  
+            <div id="accessory-selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div></div>
+
+            <input type="submit" value="Save Dog"  />
+        </form>
+
         <div class="row">
             <!-- create each dog -->
             <div class="col-lg-3">
