@@ -14,35 +14,31 @@ body {
 
 #main-dog {
     z-index: 1;
+    bottom: 10vw;
+    left: 40vw;
 }
 #main-dog, #accessory-selected img {
     position: absolute;
-    bottom: 10vw;
-    left: 40vw;
     width: 300px;
 }
 
 #accessory-selected img {
-    position: absolute;
     bottom: 0vw;
     left: 0vw;
     max-width: 50vw;
     z-index: 2;
 }
 
-
-#main-dog {
-    z-index: 1;
-}
 #accessory {
-    width: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
     height: auto;
     overflow: hidden;
-    margin: 0;
+    padding: 0px;
 }
 
 #accessory img {
-    display: block;
-    width: 150%;
-    margin: 0 -40% -60%;
-}
+    flex: 1;
+    width: 5%;
+]}
