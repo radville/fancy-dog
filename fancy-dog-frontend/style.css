@@ -32,8 +32,6 @@ body {
     z-index: 2;
     width: 300px;
     height: 300px;
-    border: black 1px;
-
 }
 
 #main-dog {
@@ -58,5 +56,5 @@ body {
   #accessory img {
       display: block;
       width: 150%;
-      margin: 0 -55%;
+      margin: 0 -55% -60%;
   }
