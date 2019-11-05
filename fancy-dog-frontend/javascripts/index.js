@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const loadDogs = async params => {
         const dogs = await (await fetch(BASEURL + '/dogs')).json()
         app_instance = new App(dogs)
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleSubmission = e => {
         e.preventDefault()
-        console.log("submitted!!")
         let htmlcollection = document.getElementById("accessory-selected").children
         let accessoryImgIds = [].slice.call(htmlcollection);
         
@@ -15,12 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return el.id;
         })
 
-        let dog = {
-          name: document.getElementById("name").value,
-          accessories: {
-            src: "./images/wizard-hat.png"
-          }
+        // console.log(accessories) // e.g.["cowboy-hat", "wizard-hat", "straw-hat"]
+        
+        const dog = {
+            dog: {
+                name: document.getElementById("name").value
+            },
+            accessory: {
+                src: "test source" //`./images/${accessoryID}.png`
+            }
         }
+        
 
         let configObject = {
             method: 'POST',
@@ -46,11 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(error.message);
             });
         }
-    document
-        .querySelector('#dog-form')
-        .addEventListener('submit', handleSubmission)
+
+document
+    .querySelector('#dog-form')
+    .addEventListener('submit', handleSubmission)
+
+document.addEventListener('DOMContentLoaded', () => {
   loadDogs()
-    
 })
 
 function allowDrop(ev) {

@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+dog1 = Dog.create(name: "Bow Wow")
+dog2 = Dog.create(name: "Doggy")
+dog3 = Dog.create(name: "Buddy")
+
+dog1.accessories.create(src: "./images/monacle.png")
+dog2.accessories.create(src: "./images/glasses.png")
+dog2.accessories.create(src: "./images/cowboy-hat.png")
+dog3.accessories.create(src: "./images/santa-hat.png")
+dog1.accessories.create(src: "./images/wizard-hat.png")
+# Accessory.create(src: "./images/straw-hat.png")
