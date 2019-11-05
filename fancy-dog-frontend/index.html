@@ -25,11 +25,12 @@
         <![endif]-->
 
         <h1>Fancy Dog</h1>
+        <h2>Dress a new fancy dog</h2>
 
-        <form id="dog-form" action="#">
+        <form id="dog-form" action="#" method="POST">
             <div class="input-field">
                 <input type="text" name="name" id="name" />
-                <label for="title">Dog's name</label>
+                <label for="title">Dog's name:</label>
             </div>
     
             <div class="input-field">
@@ -37,29 +38,30 @@
             </div>
        
             <div class="row" id="accessory" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="./images/monacle.png" draggable="true" ondragstart="drag(event)" id="drag1">
-                <img src="./images/glasses.png" draggable="true" ondragstart="drag(event)" id="drag2">
-                <img src="./images/leprechaun_hat.png" draggable="true" ondragstart="drag(event)" id="drag3">
-                <img src="./images/cowboy-hat.png" draggable="true" ondragstart="drag(event)" id="drag4">
-                <img src="./images/santa-hat.png" draggable="true" ondragstart="drag(event)" id="drag5">
-                <img src="./images/straw-hat.png" draggable="true" ondragstart="drag(event)" id="drag6">
-                <img src="./images/wizard-hat.png" draggable="true" ondragstart="drag(event)" id="drag7">
+                <img class="col-sm" src="./images/monacle.png" draggable="true" ondragstart="drag(event)" id="drag1">
+                <img class="col-sm" src="./images/glasses.png" draggable="true" ondragstart="drag(event)" id="drag2">
+                <img class="col-sm" src="./images/leprechaun_hat.png" draggable="true" ondragstart="drag(event)" id="drag3">
+                <img class="col-sm" src="./images/cowboy-hat.png" draggable="true" ondragstart="drag(event)" id="drag4">
+                <div class="w-100"></div>
+                <img class="col-sm" src="./images/santa-hat.png" draggable="true" ondragstart="drag(event)" id="drag5">
+                <img class="col-sm" src="./images/straw-hat.png" draggable="true" ondragstart="drag(event)" id="drag6">
+                <img class="col-sm" src="./images/wizard-hat.png" draggable="true" ondragstart="drag(event)" id="drag7">
             </div>
 
             <img id="main-dog" src="./images/boston-terrier.png" alt="Boston Terrier">
   
             <div id="accessory-selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div></div>
 
             <input type="submit" value="Save Dog"  />
         </form>
 
-        <div class="row">
-            <!-- create each dog -->
-            <div class="col-lg-3">
-                dog
+        <h2>Fancy Dogs</h2>
+            <div class="row">
+                <!-- create each dog -->
+                <div class="col-lg-3">
+                    dog
+                </div>
             </div>
-        </div>
 
     </div>
 

@@ -4,7 +4,12 @@ body {
 #dog-form {
 }
 #accessory-selected {
-    border: black 1px;
+    position: absolute;
+    bottom: 10vw;
+    left: 40vw;
+    z-index: 2;
+    width: 385px;
+    height: 258.8px;
 }
 
 #main-dog {
@@ -12,9 +17,9 @@ body {
 }
 #main-dog, #accessory-selected img {
     position: absolute;
-    bottom: 40vw;
-    left: 25vw;
-    max-width: 50vw;
+    bottom: 10vw;
+    left: 40vw;
+    width: 300px;
 }
 
 #accessory-selected img {
@@ -25,36 +30,19 @@ body {
     z-index: 2;
 }
 
-#accessory-selected {
-    position: absolute;
-    bottom: 40vw;
-    left: 25vw;
-    z-index: 2;
-    width: 300px;
-    height: 300px;
-}
 
 #main-dog {
     z-index: 1;
 }
-/* 
-#accessory, #accessory-selected {
-    float: left;
-    width: 100px;
-    height: 35px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-  } */
-  #accessory {
-    width: 30vw;
+#accessory {
+    width: 10vw;
     height: auto;
     overflow: hidden;
     margin: 0;
-  }
+}
 
-  #accessory img {
-      display: block;
-      width: 150%;
-      margin: 0 -55% -60%;
-  }
+#accessory img {
+    display: block;
+    width: 150%;
+    margin: 0 -40% -60%;
+}
