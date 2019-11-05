@@ -1,12 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const loadDogs = async params => {
+        const dogs = await (await fetch(BASEURL + '/dogs')).json()
+        app_instance = new App(dogs)
+        document.getElementById("dog-list").innerHTML = app_instance.render()
+      }
+
     const handleSubmission = e => {
         e.preventDefault()
-        // let dog = {
-        //   name: ,
-        //   accessories: {
-        //     src: e.target.author.value
-        //   }
-        // }
+        console.log("submitted!!")
+        let htmlcollection = document.getElementById("accessory-selected").children
+        let accessoryImgIds = [].slice.call(htmlcollection);
+        
+        let accessories = accessoryImgIds.map(function(el) {
+            return el.id;
+        })
+
+        let dog = {
+          name: document.getElementById("name").value,
+          accessories: {
+            src: "./images/wizard-hat.png"
+          }
+        }
 
         let configObject = {
             method: 'POST',
@@ -35,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document
         .querySelector('#dog-form')
         .addEventListener('submit', handleSubmission)
-//   loadPosts()
+  loadDogs()
     
 })
 
