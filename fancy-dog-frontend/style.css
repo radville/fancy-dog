@@ -1,8 +1,10 @@
-body {
-    background: #F8F8FF;
+head + body {
+    font-family: 'Courgette', cursive;
 }
-#dog-form {
+label {
+    font-size: 1.5em;
 }
+
 #accessory-selected {
     position: absolute;
     bottom: 10vw;
@@ -46,9 +48,12 @@ body {
 .saved-dog, .saved-accessory {
     position: absolute;
     height: 15vw;
+    margin: 0 -6%;
 }
 
 .grid-container {
+    /* background-color: #F8F8FF; */
+    border: cadetblue 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -56,4 +61,5 @@ body {
 .grid-item {
     margin: 10vw 100px;
     justify-content: center;
+    border: black 1px;
 }
