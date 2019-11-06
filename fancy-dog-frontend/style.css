@@ -44,13 +44,16 @@ body {
 ]}
 
 .saved-dog, .saved-accessory {
+    position: absolute;
     width: 20vw;
 }
 
-img.saved-dog {
-    z-index: 1;
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
-img.saved-accessory{
-    z-index: 2;
+.grid-item {
+    margin: 10vw 5vw;
 }

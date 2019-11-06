@@ -4,7 +4,7 @@ class App {
     }
   
     render() {
-      return `<div class="card-group">
+      return `<div class="grid-container">
         ${this.dogs.map(dog => dog.render()).join('')}
       </div>`
     }

@@ -12,14 +12,12 @@ class Dog {
     }
 
     render() {
-        return `<div class="card">
-                <div class="card-body bg-light">
+        return `<div class="grid-item">
                 <h3 class="card-title">Name: ${this.name}</h3>
                 <img class="saved-dog card-img-bottom" src="./images/boston-terrier.png" alt="Boston Terrier">
                 ${this.accessories.map(function(accessory) { 
                     return "<img class='saved-accessory card-img-bottom' src=" + accessory.src + ">"
                 }).join("")}
-                </div>
                 </div>`
       }
 }
