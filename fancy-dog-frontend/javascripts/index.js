@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let htmlcollection = document.getElementById("accessory-selected").children
     let accessoryImgIds = [].slice.call(htmlcollection);
     
-    let accessories = accessoryImgIds.map(function(el) {
-        return el.id;
+    let accessories = accessoryImgIds.map(function(elId) {
+        let accessoryObj = {};
+        accessoryObj.src = "./images/" + elId.id + ".png"
+        return accessoryObj;
     })
 
     // console.log(accessories) // e.g.["cowboy-hat", "wizard-hat", "straw-hat"]
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dog = {
         dog: {
             name: document.getElementById("name").value,
-            accessories_attributes: [{src: "test src 1"}, {src: "test src 2"}]
+            accessories_attributes: accessories
         }
     }
     
@@ -34,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(function(data) {
             console.log(data);
-            // const dog = new Dog(data)
-            // dogList.innerHTML = app_instance.render()
-            // e.target.reset()
+            const dog = new Dog(data)
+            loadDogs()
+            e.target.reset()
         })
         .catch(function(error) {
             alert("Form error!");
