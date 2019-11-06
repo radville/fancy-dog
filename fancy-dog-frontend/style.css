@@ -43,6 +43,14 @@ body {
     width: 5%;
 ]}
 
-.saved-dog {
+.saved-dog, .saved-accessory {
     width: 20vw;
+}
+
+img.saved-dog {
+    z-index: 1;
+}
+
+img.saved-accessory{
+    z-index: 2;
 }

@@ -1,4 +1,7 @@
-const handleSubmission = e => {
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const handleSubmission = e => {
     e.preventDefault()
     let htmlcollection = document.getElementById("accessory-selected").children
     let accessoryImgIds = [].slice.call(htmlcollection);
@@ -12,7 +15,7 @@ const handleSubmission = e => {
     const dog = {
         dog: {
             name: document.getElementById("name").value,
-            accessories_attributes: [{src: "ASdasdasd"}, {src: "asdasd"}]
+            accessories_attributes: [{src: "test src 1"}, {src: "test src 2"}]
         }
     }
     
@@ -40,21 +43,19 @@ const handleSubmission = e => {
             console.log(error.message);
         });
     }
+    
+    const loadDogs = async params => {
+        const dogs = await (await fetch(BASEURL + '/dogs')).json()
+        app_instance = new App(dogs)
+        document.getElementById("dog-list").innerHTML = app_instance.render()
+    }
+  
+    loadDogs()
+    document
+        .querySelector('#dog-form')
+        .addEventListener('submit', handleSubmission)
 
-document
-    .querySelector('#dog-form')
-    .addEventListener('submit', handleSubmission)
-
-document.addEventListener('DOMContentLoaded', () => {
-  loadDogs()
 })
-
-const loadDogs = async params => {
-    console.log("loading dogs")
-    const dogs = await (await fetch(BASEURL + '/dogs')).json()
-    app_instance = new App(dogs)
-    document.getElementById("dog-list").innerHTML = app_instance.render()
-}
 
 function allowDrop(ev) {
     ev.preventDefault();
