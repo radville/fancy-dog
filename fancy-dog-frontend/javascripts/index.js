@@ -44,9 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function deleteDog() {
-        console.log("delete!!")
         let dogId = this.parentElement.getAttribute("dog-id");
-
         fetch(BASEURL + `/dogs/${dogId}`, {
             method: "DELETE"
         })
@@ -54,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(function(data) {
-                let deletedDog = document.querySelector(`.grid-item[dog-id]=${dogId}`)
+                let deletedDog = document.querySelector(`.grid-item[dog-id="${dogId}"]`)
                 deletedDog.remove()
             })
             .catch(function(error) {
-                alert("Form error!");
+                alert("Fetch error!");
                 console.log(error.message);
             });
     }
