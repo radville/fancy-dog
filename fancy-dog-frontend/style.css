@@ -19,7 +19,7 @@ body {
 }
 #main-dog, #accessory-selected img {
     position: absolute;
-    width: 300px;
+    width: 400px;
 }
 
 #accessory-selected img {
@@ -45,15 +45,15 @@ body {
 
 .saved-dog, .saved-accessory {
     position: absolute;
-    width: 20vw;
+    height: 15vw;
 }
 
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
 }
 
 .grid-item {
-    margin: 0vw 5vw 20vw 5vw;
+    margin: 10vw 100px;
+    justify-content: center;
 }
