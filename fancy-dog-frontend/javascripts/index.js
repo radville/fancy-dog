@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         accessoryObj.src = "./images/" + elId.id + ".png"
         return accessoryObj;
     })
-
-    // console.log(accessories) // e.g.["cowboy-hat", "wizard-hat", "straw-hat"]
     
     const dog = {
         dog: {
@@ -35,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(function(data) {
-            console.log(data);
             const dog = new Dog(data)
             loadDogs()
             e.target.reset()
@@ -45,18 +42,49 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(error.message);
         });
     }
+
+    function deleteDog() {
+        console.log("delete!!")
+        let dogId = this.parentElement.getAttribute("dog-id");
+
+        fetch(BASEURL + `/dogs/${dogId}`, {
+            method: "DELETE"
+        })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                let deletedDog = document.querySelector(`.grid-item[dog-id]=${dogId}`)
+                deletedDog.remove()
+            })
+            .catch(function(error) {
+                alert("Form error!");
+                console.log(error.message);
+            });
+    }
     
     const loadDogs = async params => {
         const dogs = await (await fetch(BASEURL + '/dogs')).json()
         app_instance = new App(dogs)
         document.getElementById("dog-list").innerHTML = app_instance.render()
+        const buttons = Array.from(document.getElementsByClassName("delete-dog-button"));
+
+        buttons.forEach(button => {
+            button.addEventListener('click', deleteDog);
+        })
     }
   
-    loadDogs()
+    loadDogs();
+
     document
         .querySelector('#dog-form')
-        .addEventListener('submit', handleSubmission)
+        .addEventListener('submit', handleSubmission);
 
+    // document
+    //     .querySelector('.grid-item').forEach.addEventListener('.delete-dog-button').forEach(button => {
+    //         button.addEventListener("click", deleteDog)
+    //     })
+        
 })
 
 function allowDrop(ev) {

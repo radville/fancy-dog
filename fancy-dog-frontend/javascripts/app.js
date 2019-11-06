@@ -5,7 +5,6 @@ class App {
   
     render() {
       return `<div class="grid-container">
-        <h2>Fancy Dog Hall of Fame</h2>
         ${this.dogs.map(dog => dog.render()).join('')}
       </div>`
     }

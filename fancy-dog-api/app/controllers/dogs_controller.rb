@@ -13,11 +13,17 @@ class DogsController < ApplicationController
         end
     end
 
+    def destroy
+        dog = Dog.find(params[:id])
+        dog.destroy
+        render json: dog
+    end
+
     private
 
     def dog_json(dog)
         dog.to_json(
-            only:[:name],
+            only:[:name, :id],
             include:{ accessories: {only: [:src]}}
         )
     end

@@ -63,3 +63,7 @@ label {
     justify-content: center;
     border: black 1px;
 }
+
+.delete-dog-button {
+    z-index: 2;
+}
