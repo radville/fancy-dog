@@ -4,7 +4,7 @@ class App {
     }
   
     render() {
-      return `<div class="dog-card">
+      return `<div class="card-group">
         ${this.dogs.map(dog => dog.render()).join('')}
       </div>`
     }
