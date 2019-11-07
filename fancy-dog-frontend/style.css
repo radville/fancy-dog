@@ -67,25 +67,32 @@ label {
 /* saved dogs (dog hall of fame) styling */
 
 .saved-dog, .saved-accessory {
-    position: absolute;
     height: 15vw;
-    margin: 0 -6%;
+}
+
+.saved-accessory {
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    z-index: 2;
 }
 
 .grid-container {
-    /* background-color: #F8F8FF; */
-    /* position: relative; */
     border: cadetblue 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .grid-item {
-    margin: 10vw 100px;
+    position: relative;
+    margin: 5px;
+    padding: 5px;
     justify-content: center;
-    border: black 1px;
+    border: black 1px solid;
 }
 
 .delete-dog-button {
-    z-index: 2;
+    z-index: 4;
+    position: absolute;
+    bottom: 5px;
 }
