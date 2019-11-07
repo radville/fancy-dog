@@ -90,7 +90,7 @@ function drop(ev) {
     let data = ev.dataTransfer.getData("text");
     if (ev.target.id === "accessory-selected" || ev.target.parentElement.id === "accessory-selected" ) {
         document.getElementById("accessory-selected").appendChild(document.getElementById(data));
-    } else if (ev.target.id === "accessory") {
+    } else {
         document.getElementById("accessory").appendChild(document.getElementById(data));
     }
 }
