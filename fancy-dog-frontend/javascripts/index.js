@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // event listener for new dog form
     const handleSubmission = e => {
         e.preventDefault()
         let htmlcollection = document.getElementById("accessory-selected").children
         let accessoryImgIds = [].slice.call(htmlcollection);
-        
+
+        // create accessory objects from the list of all accessories on the dog, to be passed
+        // to the dog object in the body of the configObject
         let accessories = accessoryImgIds.map(function(elId) {
             let accessoryObj = {};
             accessoryObj.src = "./images/" + elId.id + ".png"
@@ -77,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .addEventListener('submit', handleSubmission);    
 })
 
+// allow accessories to be dragged and dropped on the new dog
 function allowDrop(ev) {
     ev.preventDefault();
 }
