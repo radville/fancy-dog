@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const handleSubmission = e => {
     e.preventDefault()
@@ -76,13 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document
         .querySelector('#dog-form')
-        .addEventListener('submit', handleSubmission);
-
-    // document
-    //     .querySelector('.grid-item').forEach.addEventListener('.delete-dog-button').forEach(button => {
-    //         button.addEventListener("click", deleteDog)
-    //     })
-        
+        .addEventListener('submit', handleSubmission);    
 })
 
 function allowDrop(ev) {
@@ -96,9 +88,9 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     let data = ev.dataTransfer.getData("text");
-    if (ev.target.parentElement.id === "dog-form" || ev.target.parentElement.id === "accessory-selected" ) {
+    if (ev.target.id === "accessory-selected" || ev.target.parentElement.id === "accessory-selected" ) {
         document.getElementById("accessory-selected").appendChild(document.getElementById(data));
-    } else {
+    } else if (ev.target.id === "accessory") {
         document.getElementById("accessory").appendChild(document.getElementById(data));
     }
 }

@@ -2,45 +2,52 @@ head + body {
     font-family: 'Courgette', cursive;
 }
 
-/* head + body + div.container {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    width: 100vw;
-} */
-
 /* new dog form styling */
 #dog-form {
     left: 0;
-    /* width: 100vw; */
     padding: 1vw;
     /* background-color: #d2f4f5; */
     border: 2px solid #88ddba ;
-    
 }
 
 label {
     font-size: 1.5em;
 }
 
+#accessory {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    /* height: auto; */
+    overflow: hidden;
+    padding: 0px;
+    z-index: 2;
+}
+
+#accessory img {
+    border: 1px solid black;
+    flex: 0 0 auto;
+    width: 14%;
+}
+
+#main-dog {
+    z-index: 3;
+    bottom: 10vw;
+    left: 40vw;
+}
+
+#main-dog, #accessory-selected img {
+    position: absolute;
+    width: 400px;
+}
+
 #accessory-selected {
     position: absolute;
     bottom: 10vw;
     left: 40vw;
-    z-index: 2;
+    z-index: 4;
     width: 385px;
     height: 258.8px;
-}
-
-#main-dog {
-    z-index: 1;
-    bottom: 10vw;
-    left: 40vw;
-}
-#main-dog, #accessory-selected img {
-    position: absolute;
-    width: 400px;
 }
 
 #accessory-selected img {
@@ -49,20 +56,6 @@ label {
     max-width: 50vw;
     z-index: 2;
 }
-
-#accessory {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90vw;
-    height: auto;
-    overflow: hidden;
-    padding: 0px;
-}
-
-#accessory img {
-    flex: 1;
-    width: 5%;
-]}
 
 /* saved dogs (dog hall of fame) styling */
 
@@ -78,7 +71,6 @@ label {
 }
 
 .grid-container {
-    border: cadetblue 10px;
     display: flex;
     flex-wrap: wrap;
 }
