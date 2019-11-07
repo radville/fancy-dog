@@ -1,6 +1,25 @@
 head + body {
     font-family: 'Courgette', cursive;
 }
+
+/* head + body + div.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100vw;
+} */
+
+/* new dog form styling */
+#dog-form {
+    left: 0;
+    /* width: 100vw; */
+    padding: 1vw;
+    /* background-color: #d2f4f5; */
+    border: 2px solid #88ddba ;
+    
+}
+
 label {
     font-size: 1.5em;
 }
@@ -45,6 +64,8 @@ label {
     width: 5%;
 ]}
 
+/* saved dogs (dog hall of fame) styling */
+
 .saved-dog, .saved-accessory {
     position: absolute;
     height: 15vw;
@@ -53,6 +74,7 @@ label {
 
 .grid-container {
     /* background-color: #F8F8FF; */
+    /* position: relative; */
     border: cadetblue 10px;
     display: flex;
     flex-wrap: wrap;
