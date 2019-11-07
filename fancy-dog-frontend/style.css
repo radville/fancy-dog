@@ -8,9 +8,6 @@ head + body {
     padding: 1vw;
     background-color: #fffae6;
     border: gold solid 1px;
-    /* -webkit-box-shadow: 6px 3px 36px -10px #cc9900;
-    -moz-box-shadow: 6px 3px 36px -10px #cc9900;
-    box-shadow: 6px 3px 36px -10px #cc9900; */
 }
 
 label {

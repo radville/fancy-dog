@@ -8,4 +8,4 @@ class App {
         ${this.dogs.map(dog => dog.render()).join('')}
       </div>`
     }
-  }
+}

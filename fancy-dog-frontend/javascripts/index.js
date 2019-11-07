@@ -1,44 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const handleSubmission = e => {
-    e.preventDefault()
-    let htmlcollection = document.getElementById("accessory-selected").children
-    let accessoryImgIds = [].slice.call(htmlcollection);
-    
-    let accessories = accessoryImgIds.map(function(elId) {
-        let accessoryObj = {};
-        accessoryObj.src = "./images/" + elId.id + ".png"
-        return accessoryObj;
-    })
-    
-    const dog = {
-        dog: {
-            name: document.getElementById("name").value,
-            accessories_attributes: accessories
+    const handleSubmission = e => {
+        e.preventDefault()
+        let htmlcollection = document.getElementById("accessory-selected").children
+        let accessoryImgIds = [].slice.call(htmlcollection);
+        
+        let accessories = accessoryImgIds.map(function(elId) {
+            let accessoryObj = {};
+            accessoryObj.src = "./images/" + elId.id + ".png"
+            return accessoryObj;
+        })
+        
+        const dog = {
+            dog: {
+                name: document.getElementById("name").value,
+                accessories_attributes: accessories
+            }
         }
-    }
-    
-    let configObject = {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(dog)
-        }
+        
+        let configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(dog)
+            }
 
-    fetch(BASEURL + '/dogs', configObject)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            const dog = new Dog(data)
-            loadDogs()
-            e.target.reset()
-        })
-        .catch(function(error) {
-            alert("Form error!");
-            console.log(error.message);
-        });
+        fetch(BASEURL + '/dogs', configObject)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                const dog = new Dog(data)
+                loadDogs()
+                e.target.reset()
+            })
+            .catch(function(error) {
+                alert("Form error!");
+                console.log(error.message);
+            });
     }
 
     function deleteDog() {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deletedDog.remove()
             })
             .catch(function(error) {
-                alert("Fetch error!");
+                alert("Form error!");
                 console.log(error.message);
             });
     }
