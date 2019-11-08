@@ -39,22 +39,27 @@
                 <label for="accessories">Click and drag accessories onto your dog!</label>
                 <input type="hidden" name="accessories" id="accessories">
             </div>
-            
-            <div id="accessory" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="./images/monacle.png" draggable="true" ondragstart="drag(event)" id="monacle">
-                <img src="./images/glasses.png" draggable="true" ondragstart="drag(event)" id="glasses">
-                <img src="./images/leprechaun-hat.png" draggable="true" ondragstart="drag(event)" id="leprechaun_hat">
-                <img src="./images/cowboy-hat.png" draggable="true" ondragstart="drag(event)" id="cowboy-hat">
-                <img src="./images/santa-hat.png" draggable="true" ondragstart="drag(event)" id="santa-hat">
-                <img src="./images/straw-hat.png" draggable="true" ondragstart="drag(event)" id="straw-hat">
-                <img src="./images/birthday-hat.png" draggable="true" ondragstart="drag(event)" id="birthday-hat">
-            </div>
 
             <img id="main-dog" src="./images/boston-terrier.png" alt="Boston Terrier">
   
             <div id="accessory-selected" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 
-            <br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="choose-accessory">
+                <span class="next">Scroll right to see more</span>
+            <div id="accessory" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="card" src="./images/monacle.png" draggable="true" ondragstart="drag(event)" id="monacle">
+                <img class="card" src="./images/glasses.png" draggable="true" ondragstart="drag(event)" id="glasses">
+                <img class="card" src="./images/sunglasses.png" draggable="true" ondragstart="drag(event)" id="sunglasses">
+                <img class="card" src="./images/leprechaun-hat.png" draggable="true" ondragstart="drag(event)" id="leprechaun_hat">
+                <img class="card" src="./images/cowboy-hat.png" draggable="true" ondragstart="drag(event)" id="cowboy-hat">
+                <img class="card" src="./images/santa-hat.png" draggable="true" ondragstart="drag(event)" id="santa-hat">
+                <img class="card" src="./images/straw-hat.png" draggable="true" ondragstart="drag(event)" id="straw-hat">
+                <img class="card" src="./images/birthday-hat.png" draggable="true" ondragstart="drag(event)" id="birthday-hat">
+                <img class="card" src="./images/crown.png" draggable="true" ondragstart="drag(event)" id="crown">
+            </div>
+            </div>
+            <!-- <p class="dog-header">Scroll right to see more</p> -->
 
             <input type="submit" value="Save Dog" >
         </form>
