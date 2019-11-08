@@ -18,34 +18,6 @@ label {
     font-size: 1.5em;
 }
 
-#main-dog {
-    z-index: 3;
-    bottom: 13vw;
-    left: 30vw;
-}
-
-#main-dog, #accessory-selected img {
-    position: absolute;
-    width: 400px;
-}
-
-#accessory-selected {
-    position: absolute;
-    bottom: 13vw;
-    left: 30vw;
-    z-index: 4;
-    width: 385px;
-    height: 258.8px;
-}
-
-#accessory-selected img {
-    bottom: 0vw;
-    left: 0vw;
-    max-width: 50vw;
-    z-index: 2;
-}
-
-
 #accessory {
     display: flex;
     overflow-x: scroll;
@@ -69,6 +41,33 @@ label {
 #accessory img {
     flex: 0 0 auto;
     width: 14%;
+}
+
+#main-dog {
+    z-index: 3;
+    bottom: 7vw;
+    left: 30vw;
+}
+
+#main-dog, #accessory-selected img {
+    position: absolute;
+    width: 400px;
+}
+
+#accessory-selected {
+    position: absolute;
+    bottom: 7vw;
+    left: 30vw;
+    z-index: 4;
+    width: 385px;
+    height: 258.8px;
+}
+
+#accessory-selected img {
+    bottom: 0vw;
+    left: 0vw;
+    max-width: 50vw;
+    z-index: 2;
 }
 
 /* saved dogs (dog hall of fame) styling */
