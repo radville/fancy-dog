@@ -36,12 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(data) {
                 const dog = new Dog(data)
                 savedDogMessage(dog.name, 5000)
-                // document.getElementById("alert").innerHTML = `Congratulations! ${dog.name} has been inducted into the Fancy Dog Hall of Fame!`
                 loadDogs()
                 e.target.reset()
             })
             .catch(function(error) {
-                alert("Form error!");
+                alert("Dog not saved!");
                 console.log(error.message);
             });
     }
