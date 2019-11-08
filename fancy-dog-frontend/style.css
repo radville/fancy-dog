@@ -2,6 +2,10 @@ head + body {
     font-family: 'Courgette', cursive;
 }
 
+.dog-header {
+    text-align: center;
+}
+
 /* new dog form styling */
 #dog-form {
     left: 0;
@@ -55,12 +59,6 @@ label {
 }
 
 /* saved dogs (dog hall of fame) styling */
-#hall-of-fame-header {
-    text-align: center;
-}
-.dog-name-header {
-    text-align: center;
-}
 .saved-dog, .saved-accessory {
     height: 15vw;
     margin: 0 -15%;
