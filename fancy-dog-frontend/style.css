@@ -6,6 +6,10 @@ head + body {
     text-align: center;
 }
 
+.alert:empty {
+    display: none;
+ }
+
 /* new dog form styling */
 #dog-form {
     left: 0;

@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(function(data) {
                 const dog = new Dog(data)
+                savedDogMessage(dog.name, 5000)
+                // document.getElementById("alert").innerHTML = `Congratulations! ${dog.name} has been inducted into the Fancy Dog Hall of Fame!`
                 loadDogs()
                 e.target.reset()
             })
@@ -97,4 +99,15 @@ function drop(ev) {
     } else {
         document.getElementById("accessory").appendChild(document.getElementById(data));
     }
+}
+
+// Create flash message for saved dog
+function savedDogMessage(dogName, duration) {
+    let el = document.createElement("div");
+    el.classList.add("alert");
+    el.innerHTML = `Congratulations! ${dogName} has been inducted into the Fancy Dog Hall of Fame!`;
+    setTimeout(function(){
+        document.getElementById("alert").removeChild(el);
+        },duration);
+        document.getElementById("alert").appendChild(el);
 }
