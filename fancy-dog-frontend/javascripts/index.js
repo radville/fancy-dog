@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    // called when delete dog button is pressed
     function deleteDog() {
         let dogId = this.parentElement.getAttribute("dog-id");
         fetch(BASEURL + `/dogs/${dogId}`, {
@@ -62,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(error.message);
             });
     }
-    
+
+    // loads all saved dogs to the page
     const loadDogs = async params => {
         const dogs = await (await fetch(BASEURL + '/dogs')).json()
         app_instance = new App(dogs)
@@ -73,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', deleteDog);
         })
     }
-  
-    loadDogs();
 
+    // when DOM content is loaded, display saved dogs & add listener on new dog form submit button
+    loadDogs();
     document
         .querySelector('#dog-form')
         .addEventListener('submit', handleSubmission);    
