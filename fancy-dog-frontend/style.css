@@ -1,110 +1,145 @@
-head + body {
-    font-family: 'Courgette', cursive;
+@media screen {
+    head + body {
+        font-family: 'Courgette', cursive;
+    }
+
+    .dog-header {
+        text-align: center;
+    }
+
+    .alert:empty {
+        display: none;
+    }
+
+    /* new dog form styling */
+    #dog-form {
+        left: 0;
+        padding: 1vw;
+        background-color: #fffae6;
+        border: gold solid 1px;
+    }
+
+    label {
+        font-size: 1.5em;
+    }
+
+    #accessory {
+        display: flex;
+        overflow-x: scroll;
+        overflow: -moz-scrollbars-horizontal; 
+        padding: 0px;
+        z-index: 2;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .next 
+    {
+    opacity: 0;
+    transition: opacity 800ms;
+    }
+
+    .choose-accessory:hover .next
+    {
+        opacity: 1.0;
+    }
+
+    #accessory img {
+        flex: 0 0 auto;
+        width: 14%;
+    }
+
+    #main-dog {
+        z-index: 3;
+        bottom: 7vw;
+        left: 30vw;
+    }
+
+    #main-dog, #accessory-selected img {
+        position: absolute;
+        width: 400px;
+    }
+
+    #accessory-selected {
+        position: absolute;
+        bottom: 7vw;
+        left: 30vw;
+        z-index: 4;
+        width: 385px;
+        height: 258.8px;
+    }
+
+    #accessory-selected img {
+        bottom: 0vw;
+        left: 0vw;
+        max-width: 50vw;
+        z-index: 2;
+    }
+
+    /* saved dogs (dog hall of fame) styling */
+    .saved-dog, .saved-accessory {
+        height: 15vw;
+        margin: 0 -15%;
+    }
+
+    .saved-accessory {
+        position: absolute;
+        bottom: 13.5%;
+        left: 7px;
+        z-index: 2;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .grid-item {
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+        justify-content: center;
+        width: 20vw;
+        height: 24vw;
+        border: #2e1a12 solid 8px;
+        -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,1);
+    }
+
+    .delete-dog-button {
+        z-index: 4;
+        position: absolute;
+        bottom: 5px;
+    }
 }
 
-.dog-header {
-    text-align: center;
-}
+@media screen and (max-width: 1030px) {
+    /* new dog form styling */
 
-.alert:empty {
-    display: none;
- }
+    #main-dog{
+        bottom: 15vw;
+        left: 25vw;
+    }
 
-/* new dog form styling */
-#dog-form {
-    left: 0;
-    padding: 1vw;
-    background-color: #fffae6;
-    border: gold solid 1px;
-}
+    #accessory-selected {
+        bottom: 15vw;
+        left: 25vw;
+    }
 
-label {
-    font-size: 1.5em;
-}
+    #accessory img {
+        flex: 0 0 auto;
+        width: 25%;
+    }
 
-#accessory {
-    display: flex;
-    overflow-x: scroll;
-    overflow: -moz-scrollbars-horizontal; 
-    padding: 0px;
-    z-index: 2;
-    -webkit-overflow-scrolling: touch;
-}
+    /* saved dogs (dog hall of fame) styling */
+    .saved-dog, .saved-accessory {
+        height: 20vw;
+    }
 
-.next 
-{
-  opacity: 0;
-  transition: opacity 800ms;
-}
-
-.choose-accessory:hover .next
-{
-    opacity: 1.0;
-}
-
-#accessory img {
-    flex: 0 0 auto;
-    width: 14%;
-}
-
-#main-dog {
-    z-index: 3;
-    bottom: 7vw;
-    left: 30vw;
-}
-
-#main-dog, #accessory-selected img {
-    position: absolute;
-    width: 400px;
-}
-
-#accessory-selected {
-    position: absolute;
-    bottom: 7vw;
-    left: 30vw;
-    z-index: 4;
-    width: 385px;
-    height: 258.8px;
-}
-
-#accessory-selected img {
-    bottom: 0vw;
-    left: 0vw;
-    max-width: 50vw;
-    z-index: 2;
-}
-
-/* saved dogs (dog hall of fame) styling */
-.saved-dog, .saved-accessory {
-    height: 15vw;
-    margin: 0 -15%;
-}
-
-.saved-accessory {
-    position: absolute;
-    bottom: 13.5%;
-    left: 7px;
-    z-index: 2;
-}
-
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.grid-item {
-    position: relative;
-    margin: 5px;
-    padding: 5px;
-    justify-content: center;
-    width: 20vw;
-    height: 24vw;
-    border: #2e1a12 solid 8px;
-    -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,1);
-}
-
-.delete-dog-button {
-    z-index: 4;
-    position: absolute;
-    bottom: 5px;
+    .saved-accessory {
+        bottom: 17.5%;
+        left: 8px;
+    }
+    .grid-item {
+        width: 25vw;
+        height: 35vw;
+    }
 }
