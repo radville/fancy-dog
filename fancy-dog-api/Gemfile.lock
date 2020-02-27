@@ -88,11 +88,19 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
+<<<<<<< HEAD
     pg (1.2.2)
     puma (3.12.2)
     rack (2.2.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
+=======
+    pg (1.1.4)
+    puma (3.12.2)
+    rack (2.0.8)
+    rack-cors (1.0.5)
+      rack (>= 1.6.0)
+>>>>>>> 196250e5ecaa608b2a053b220d7ad7bacc626960
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.2.1)
@@ -154,7 +162,7 @@ DEPENDENCIES
   byebug
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rack-cors
   rails (~> 6.0.0)
   spring
